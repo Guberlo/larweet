@@ -15,9 +15,11 @@
                 <p class="text-sm">Signed up {{$user->created_at->diffForHumans() }}</p>
             </div>
 
-            <div>
+            <div class="flex">
                 <a href="" class="bg-gray-100 rounded-full border border-gray-300 py-2 px-4 text-black-200 text-sm mr-2">Edit Profile</a>
-                <a href="" class="bg-blue-500 rounded-full shadow py-2 px-4 text-white text-sm">Follow Me</a>
+
+                <x-follow-button :user="$user"></x-follow-button>
+
             </div>
         </div>
 
