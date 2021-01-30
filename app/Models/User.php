@@ -10,7 +10,7 @@ use App\Models\Tweet;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, Followable;
 
     /**
      * The attributes that are mass assignable.
@@ -58,14 +58,6 @@ class User extends Authenticatable
 
     public function tweets() {
         return $this->hasMany(Tweet::class);
-    }
-
-    public function follow(User $user) {
-        return $this->follows()->save($user);
-    }
-
-    public function follows() {
-        return $this->belongsToMany(User::class, 'followers', 'user_id', 'follower_id');
     }
 
     public function getRouteKeyName() {
