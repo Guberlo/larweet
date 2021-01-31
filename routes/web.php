@@ -21,3 +21,5 @@ Auth::routes();
 Route::resource('/tweets', App\Http\Controllers\TweetController::class);
 
 Route::resource('/users', App\Http\Controllers\UserController::class);
+
+Route::post('/users/follow/{user}', [App\Http\Controllers\FollowController::class, 'store']);
