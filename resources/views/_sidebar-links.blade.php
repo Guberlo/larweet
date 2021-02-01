@@ -23,4 +23,13 @@
     <li><a 
         href="/" class="font-bold text-lg mb-4 block">
         More</a></li>
+    <li>
+        <form action="/logout" method="post">
+            @csrf
+            <button
+                href="/" class="font-bold text-lg mb-4 block">
+                Logout
+            </button>
+        </form>
+    </li>
 </ul>
