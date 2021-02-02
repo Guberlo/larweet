@@ -18,9 +18,18 @@
         href="/" class="font-bold text-lg mb-4 block">
         Lists</a></li>
     <li><a 
-        href="/users/{{ auth()->user()->name }}" class="font-bold text-lg mb-4 block">
+        href="/users/{{ auth()->user()->username }}" class="font-bold text-lg mb-4 block">
         Profile</a></li>
     <li><a 
         href="/" class="font-bold text-lg mb-4 block">
         More</a></li>
+    <li>
+        <form action="/logout" method="post">
+            @csrf
+            <button
+                href="/" class="font-bold text-lg mb-4 block">
+                Logout
+            </button>
+        </form>
+    </li>
 </ul>
