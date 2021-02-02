@@ -18,7 +18,7 @@
         href="/" class="font-bold text-lg mb-4 block">
         Lists</a></li>
     <li><a 
-        href="/users/{{ auth()->user()->name }}" class="font-bold text-lg mb-4 block">
+        href="/users/{{ auth()->user()->username }}" class="font-bold text-lg mb-4 block">
         Profile</a></li>
     <li><a 
         href="/" class="font-bold text-lg mb-4 block">

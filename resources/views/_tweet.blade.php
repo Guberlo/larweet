@@ -10,8 +10,8 @@
 
        <!-- POST -->
        <div>
-           <a href="/users/{{ $tweet->user->name }}">
-                <h5 class="font-bold mb-4">{{ $tweet->user->name }}</h5>
+           <a href="/users/{{ $tweet->user->username }}">
+                <h5 class="font-bold mb-4">{{ $tweet->user->username }}</h5>
            </a>
            <p class="text-sm text-black">
                {{ $tweet->body }}
