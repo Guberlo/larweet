@@ -1,7 +1,7 @@
 <div class="border border-blue-400 rounded-2xl px-8 py-6 mb-8">
     <form method="post" action="/tweets">
         @csrf
-        <textarea name="body" class="w-full focus:outline-none" placeholder="Larweet something!"></textarea>
+        <textarea name="body" class="resize-none w-full focus:outline-none" placeholder="Larweet something!"></textarea>
 
         <hr class="my-4">
 
