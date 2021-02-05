@@ -14,7 +14,7 @@
                 alt="avatar"
                 class="rounded-full mr-2"
             >
-            <button class="bg-blue-500 rounded-2xl shadow py-2 px-2 text-white">Larweet</button>
+            <button class="hover:bg-blue-600 bg-blue-500 rounded-2xl shadow py-2 px-2 text-white">Larweet</button>
         </footer>
     </form>
 </div>
