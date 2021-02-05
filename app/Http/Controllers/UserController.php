@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -75,9 +76,16 @@ class UserController extends Controller
         $attributes = request()->validate([
             'username' => ['string', 'required', 'max:255', Rule::unique('users', 'username')->ignore($user)],
             'name' => ['string', 'required', 'max:255'],
-            'email' => ['string', 'required', 'max:255', Rule::unique('users', 'email')->ignore($user)],
-            'password' => ['string', 'required', 'max:255', 'confirmed']
+            'email' => ['string', 'required', 'max:255', Rule::unique('users', 'email')->ignore($user)]
         ]);
+        
+        if(request('password')) {
+            $new_password = request()->validate([
+                'password' => ['string', 'max:255', 'confirmed']
+            ]);
+
+            $attributes['password'] = Hash::make($new_password['password']);
+        }
 
         $user->update($attributes);
 

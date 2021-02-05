@@ -56,7 +56,7 @@
 
             <input id="password" type="password"
                 class="form-input w-full @error('password') border-red-500 @enderror" name="password"
-                required autocomplete="new-password">
+                autocomplete="new-password">
 
             @error('password')
             <p class="text-red-500 text-xs italic mt-4">
@@ -71,7 +71,7 @@
             </label>
 
             <input id="password-confirm" type="password" class="form-input w-full"
-                name="password_confirmation" required autocomplete="new-password">
+                name="password_confirmation" autocomplete="new-password">
         </div>
 
         <div class="flex flex-wrap  mt-5">
