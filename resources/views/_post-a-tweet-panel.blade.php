@@ -9,7 +9,7 @@
             <p class="text-sm text-red-500 mt-4 mb-4">Bruh, {{ $message }}</p>
         @enderror
 
-        <footer class="flex justify-between">
+        <footer class="flex justify-between items-center">
             <img src="{{ auth()->user()->getAvatar(40) }}" 
                 alt="avatar"
                 class="rounded-full mr-2"
